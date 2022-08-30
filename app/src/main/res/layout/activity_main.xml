@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/stopwatchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/rect_bg"
+        android:elevation="8dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="StopWatch"
+        android:textColor="@color/TextColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/alarmBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alarmBtn" />
+
+
+    <Button
+        android:id="@+id/timerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/rect_bg"
+        android:elevation="8dp"
+        android:text="Timer"
+        android:textColor="@color/TextColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/alarmBtn"
+        app:layout_constraintTop_toBottomOf="@+id/alarmBtn" />
+
+    <ImageButton
+        android:id="@+id/alarmBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_bg"
+        android:elevation="8dp"
+        android:paddingStart="14dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="10dp"
+        android:scaleType="fitXY"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@mipmap/clock" />
+
+    <ImageView
+        android:id="@+id/climateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_baseline_cloud_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/holderTop"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:tag="holderTop"
+        app:layout_constraintStart_toStartOf="@+id/top"
+        app:layout_constraintTop_toTopOf="@+id/top"
+        app:srcCompat="@mipmap/one" />
+
+    <ImageView
+        android:id="@+id/holderBottom"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:tag="holderBottom"
+        app:layout_constraintEnd_toEndOf="@+id/holderTop"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="@+id/holderTop"
+        app:layout_constraintTop_toTopOf="@+id/bottom"
+        app:srcCompat="@mipmap/zero1" />
+
+    <ImageView
+        android:id="@+id/bottom"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:scaleY="0"
+        android:tag="bottom"
+        app:layout_constraintEnd_toEndOf="@+id/holderTop"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="@+id/holderTop"
+        app:layout_constraintTop_toBottomOf="@+id/top"
+        app:srcCompat="@mipmap/one1" />
+
+    <ImageView
+        android:id="@+id/top"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:tag="0"
+        app:layout_constraintStart_toEndOf="@+id/holderTop1"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@mipmap/zero" />
+
+    <ImageView
+        android:id="@+id/holderTop1"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:tag="holderTop"
+        app:layout_constraintBottom_toTopOf="@+id/holderBottom1"
+        app:layout_constraintEnd_toEndOf="@+id/top1"
+        app:srcCompat="@mipmap/one" />
+
+    <ImageView
+        android:id="@+id/holderBottom1"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/holderTop1"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="@+id/holderTop1"
+        app:layout_constraintTop_toTopOf="@+id/bottom1"
+        app:srcCompat="@mipmap/zero1" />
+
+    <ImageView
+        android:id="@+id/bottom1"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:scaleY="0"
+        app:layout_constraintBottom_toBottomOf="@+id/holderBottom"
+        app:layout_constraintEnd_toEndOf="@+id/holderTop1"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="@+id/holderTop1"
+        app:layout_constraintTop_toBottomOf="@+id/top1"
+        app:srcCompat="@mipmap/one1" />
+
+    <ImageView
+        android:id="@+id/top1"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="4dp"
+        android:scaleType="fitXY"
+        android:tag="0"
+        app:layout_constraintStart_toEndOf="@+id/holderTop5"
+        app:layout_constraintTop_toTopOf="@+id/holderTop"
+        app:srcCompat="@mipmap/zero" />
+
+    <ImageView
+        android:id="@+id/holderTop2"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:tag="holderTop"
+        app:layout_constraintBottom_toTopOf="@+id/holderBottom2"
+        app:layout_constraintEnd_toEndOf="@+id/top2"
+        app:srcCompat="@mipmap/one" />
+
+    <ImageView
+        android:id="@+id/holderBottom2"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/holderTop2"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="@+id/holderTop2"
+        app:layout_constraintTop_toTopOf="@+id/bottom2"
+        app:srcCompat="@mipmap/zero1" />
+
+    <ImageView
+        android:id="@+id/bottom2"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:scaleY="0"
+        app:layout_constraintEnd_toEndOf="@+id/holderBottom2"
+        app:layout_constraintTop_toBottomOf="@+id/top2"
+        app:srcCompat="@mipmap/one1" />
+
+    <ImageView
+        android:id="@+id/top2"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:tag="0"
+        app:layout_constraintEnd_toStartOf="@+id/holderTop3"
+        app:layout_constraintTop_toTopOf="@+id/holderTop"
+        app:srcCompat="@mipmap/zero" />
+
+    <ImageView
+        android:id="@+id/holderTop3"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="4dp"
+        android:scaleType="fitXY"
+        android:tag="holderTop"
+        app:layout_constraintEnd_toStartOf="@+id/holderTop4"
+        app:layout_constraintTop_toTopOf="@+id/holderTop2"
+        app:srcCompat="@mipmap/one" />
+
+    <ImageView
+        android:id="@+id/holderBottom3"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/holderTop3"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="@+id/holderTop3"
+        app:layout_constraintTop_toTopOf="@+id/bottom3"
+        app:srcCompat="@mipmap/zero1" />
+
+    <ImageView
+        android:id="@+id/bottom3"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:scaleY="0"
+        app:layout_constraintStart_toStartOf="@+id/holderTop3"
+        app:layout_constraintTop_toBottomOf="@+id/holderTop3"
+        app:srcCompat="@mipmap/one1" />
+
+    <ImageView
+        android:id="@+id/top3"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="4dp"
+        android:scaleType="fitXY"
+        android:tag="0"
+        app:layout_constraintEnd_toStartOf="@+id/holderTop4"
+        app:layout_constraintTop_toTopOf="@+id/holderTop3"
+        app:srcCompat="@mipmap/zero" />
+
+    <ImageView
+        android:id="@+id/holderTop4"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:tag="holderTop"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/holderTop3"
+        app:srcCompat="@mipmap/one" />
+
+    <ImageView
+        android:id="@+id/holderBottom4"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/holderTop4"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="@+id/holderTop4"
+        app:layout_constraintTop_toTopOf="@+id/bottom4"
+        app:srcCompat="@mipmap/zero1" />
+
+    <ImageView
+        android:id="@+id/bottom4"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:scaleY="0"
+        app:layout_constraintStart_toStartOf="@+id/holderTop4"
+        app:layout_constraintTop_toBottomOf="@+id/holderTop4"
+        app:srcCompat="@mipmap/one1" />
+
+    <ImageView
+        android:id="@+id/top4"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:tag="0"
+        app:layout_constraintEnd_toStartOf="@+id/holderTop5"
+        app:layout_constraintTop_toTopOf="@+id/holderTop4"
+        app:srcCompat="@mipmap/zero" />
+
+    <ImageView
+        android:id="@+id/holderTop5"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:tag="holderTop"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/holderTop4"
+        app:srcCompat="@mipmap/one" />
+
+    <ImageView
+        android:id="@+id/holderBottom5"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/holderTop5"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="@+id/holderTop5"
+        app:layout_constraintTop_toTopOf="@+id/bottom5"
+        app:srcCompat="@mipmap/zero1" />
+
+    <ImageView
+        android:id="@+id/bottom5"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:scaleY="0"
+        app:layout_constraintStart_toStartOf="@+id/holderTop5"
+        app:layout_constraintTop_toBottomOf="@+id/holderTop5"
+        app:srcCompat="@mipmap/one1" />
+
+    <ImageView
+        android:id="@+id/top5"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:tag="0"
+        app:layout_constraintStart_toStartOf="@+id/holderTop5"
+        app:layout_constraintTop_toTopOf="@+id/holderTop5"
+        app:srcCompat="@mipmap/zero" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="36dp"
+        android:paddingEnd="36dp"
+        android:background="@drawable/semi_rect_shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+        <TextView
+            android:id="@+id/locationTxt"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cairo, Egypt"/>
+        <TextView
+            android:id="@+id/gmtTxt"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GMT +2"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.50121653"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
